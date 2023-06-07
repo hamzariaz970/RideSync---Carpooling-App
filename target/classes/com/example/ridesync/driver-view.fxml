@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ridesync.ControllerClasses.DriverController">
+    <children>
+        <AnchorPane fx:id="pane2" onMouseClicked="#pane2Clicked" prefHeight="720.0" prefWidth="540.0" style="-fx-background-color: D1DEE7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane layoutY="-6.0" prefHeight="55.0" prefWidth="540.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 14;">
+                    <children>
+                        <ImageView fx:id="topBarImageView" fitHeight="55.0" fitWidth="540.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../resources/topbar_edited.jpeg" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="menu" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="32.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 10;">
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../resources/hamburger_menu2.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </Pane>
+                <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="79.0" layoutY="66.0" prefHeight="24.0" prefWidth="340.0" style="-fx-background-color: transparent;" text="DRIVER MODE">
+                    <font>
+                        <Font name="Helvetica" size="18.0" />
+                    </font>
+                </Label>
+            <Pane fx:id="startRidePane" layoutX="20.0" layoutY="269.0" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+               <effect>
+                  <DropShadow spread="0.09" />
+               </effect>
+               <children>
+                  <Label layoutX="185.0" prefHeight="33.0" prefWidth="130.0" text="Start your Ride" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="44.0" prefHeight="20.0" prefWidth="124.0" text="I am leaving for:" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="homeSelectButton" layoutX="253.0" layoutY="45.0" mnemonicParsing="false" text="Home">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="universitySelectButton" layoutX="379.0" layoutY="45.0" mnemonicParsing="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="37.0" layoutY="86.0" prefHeight="20.0" prefWidth="112.0" text="I am leaving in:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="startRideButton" layoutX="182.0" layoutY="155.0" mnemonicParsing="false" onAction="#onStartRideButtonClicked" prefHeight="31.0" prefWidth="136.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 10;" text="Initialize Ride" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ComboBox fx:id="hourCombobox" layoutX="211.0" layoutY="84.0" prefHeight="26.0" prefWidth="56.0" promptText="0" style="-fx-background-color: E9F3FA; -fx-background-radius: 6;" />
+                  <ComboBox fx:id="minuteComboBox" layoutX="347.0" layoutY="84.0" prefHeight="26.0" prefWidth="68.0" promptText="30" style="-fx-background-color: E9F3FA; -fx-background-radius: 6;" />
+                  <Label layoutX="281.0" layoutY="88.0" text="Hr">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="419.0" layoutY="88.0" text="Min">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="pane1" prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: grey;">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: #648DFD;">
+                    <children>
+                        <ImageView fitHeight="144.0" fitWidth="182.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../resources/profile_pic.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="7.0" layoutY="169.0" text="Click Home to return to Passenger mode" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+                <VBox layoutX="-7.0" layoutY="200.0" prefHeight="520.0" prefWidth="286.0" style="-fx-background-color: #4568E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                    <children>
+                        <JFXButton fx:id="homeButton" alignment="BASELINE_LEFT" onAction="#homeButtonClicked" prefHeight="55.0" prefWidth="275.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE" />
+                        <JFXButton fx:id="walletButton" alignment="BASELINE_LEFT" onAction="#walletButtonClicked" prefHeight="55.0" prefWidth="286.0" style="-fx-background-color: transparent;" text="My Wallet" textFill="WHITE" />
+                        <JFXButton fx:id="logoutButton" alignment="BASELINE_LEFT" onAction="#onLogoutClicked" prefHeight="55.0" prefWidth="286.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" prefHeight="720.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ridesync.ControllerClasses.LoggedInController">
+   <children>
+      <AnchorPane fx:id="pane2" onMouseClicked="#pane2Clicked" prefHeight="734.0" prefWidth="540.0" style="-fx-background-color: D1DEE7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutY="-6.0" prefHeight="55.0" prefWidth="540.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 14;">
+               <children>
+                  <ImageView fx:id="topBarImageView" fitHeight="55.0" fitWidth="540.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/topbar_edited.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="menu" layoutY="14.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="32.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 10;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../resources/hamburger_menu2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="-1.0" layoutY="64.0" prefHeight="24.0" prefWidth="540.0" style="-fx-background-color: transparent;" text="Welcome, " textAlignment="CENTER">
+               <font>
+                  <Font name="Helvetica" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="scheduleRidesPane" layoutX="25.0" layoutY="232.0" prefHeight="144.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+               <effect>
+                  <DropShadow spread="0.09" />
+               </effect>
+               <children>
+                  <Label layoutX="171.0" layoutY="5.0" prefHeight="33.0" prefWidth="170.0" text="Schedule your Ride" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="44.0" prefHeight="20.0" prefWidth="124.0" text="I want to go:" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="homeSelectButton" layoutX="253.0" layoutY="45.0" mnemonicParsing="false" text="Home" />
+                  <RadioButton fx:id="universitySelectButton" layoutX="379.0" layoutY="45.0" mnemonicParsing="false" text="To" />
+                  <Label layoutX="42.0" layoutY="87.0" text="Driver:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="femaleGenderSelect" layoutX="250.0" layoutY="86.0" mnemonicParsing="false" text="Female" />
+                  <RadioButton fx:id="maleGenderSelect" layoutX="165.0" layoutY="87.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton fx:id="anyGenderSelect" layoutX="375.0" layoutY="86.0" mnemonicParsing="false" text="Any" />
+                  <Button fx:id="searchRidesButton" layoutX="223.0" layoutY="109.0" mnemonicParsing="false" onAction="#onSearchRidesButtonClicked" style="-fx-background-color: #20BDFF; -fx-background-radius: 10;" text="Search" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane fx:id="availableRidesPane" layoutX="22.0" layoutY="416.0" prefHeight="260.0" prefWidth="502.0" style="-fx-background-color: white; -fx-background-radius: 12;">
+               <effect>
+                  <DropShadow spread="0.09" />
+               </effect>
+               <children>
+                  <Label layoutX="157.0" layoutY="-2.0" prefHeight="33.0" prefWidth="203.0" text="Nearest Available Drivers" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" layoutX="6.0" layoutY="42.0" prefHeight="221.0" prefWidth="490.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="489.0" style="-fx-background-color: B4DBF6; -fx-background-radius: 10;" text="Button">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <HBox prefHeight="36.0" prefWidth="462.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Driver:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver1NameLabel" prefHeight="17.0" prefWidth="76.0">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Car:">
+                                       <HBox.margin>
+                                          <Insets right="6.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver1CarLabel" text="Label">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Distance:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver1DistanceLabel" text="Label">
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Leaving in:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver1TimeLabel" text="Label" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="494.0" style="-fx-background-color: B4DBF6; -fx-background-radius: 10;" text="Button">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <HBox prefHeight="36.0" prefWidth="462.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Driver:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver2NameLabel" text="M. Ahmed ">
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Car:">
+                                       <HBox.margin>
+                                          <Insets right="6.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver2CarLabel" text="Suzuki Alto">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Distance:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver2DistanceLabel" text="6.8">
+                                       <padding>
+                                          <Insets right="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Leaving in:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver2TimeLabel" text="00:45" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="494.0" style="-fx-background-color: B4DBF6; -fx-background-radius: 10;" text="Button">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <graphic>
+                              <HBox prefHeight="36.0" prefWidth="462.0">
+                                 <children>
+                                    <Label alignment="CENTER" text="Driver:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver3NameLabel" text="Ali Khan">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Car:">
+                                       <HBox.margin>
+                                          <Insets right="6.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver3CarLabel" text="Suzuki Swift">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label text="Distance:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver3DistanceLabel" text="10.5">
+                                       <padding>
+                                          <Insets right="40.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Leaving in:">
+                                       <padding>
+                                          <Insets right="6.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="driver3TimeLabel" text="1:30" />
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" prefHeight="720.0" prefWidth="260.0" style="-fx-background-color: grey;">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: #648DFD;">
+               <children>
+                  <ImageView fitHeight="144.0" fitWidth="182.0" layoutX="55.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/profile_pic.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="7.0" layoutY="169.0" text="Switch to driver?" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXToggleButton fx:id="toggleButton" layoutX="182.0" layoutY="153.0" onAction="#toggleButtonActivated" prefHeight="46.0" prefWidth="55.0" size="8.0" text=" " textAlignment="CENTER" textFill="WHITE" unToggleLineColor="#4568e7" />
+               </children></AnchorPane>
+            <VBox layoutX="-7.0" layoutY="200.0" prefHeight="520.0" prefWidth="286.0" style="-fx-background-color: #4568E7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <JFXButton fx:id="homeButton" alignment="BASELINE_LEFT" onAction="#homeButtonClicked" prefHeight="55.0" prefWidth="275.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE" />
+                  <JFXButton fx:id="walletButton" alignment="BASELINE_LEFT" onAction="#walletButtonClicked" prefHeight="55.0" prefWidth="286.0" style="-fx-background-color: transparent;" text="My Wallet" textFill="WHITE" />
+                  <JFXButton fx:id="logoutButton" alignment="BASELINE_LEFT" onAction="#onLogoutClicked" prefHeight="55.0" prefWidth="286.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+
+</AnchorPane>

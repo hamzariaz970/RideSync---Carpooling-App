@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ridesync.ControllerClasses.LoginController">
+   <children>
+      <ImageView fitHeight="120.0" fitWidth="139.0" layoutX="211.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Logo-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="138.0" fitWidth="424.0" layoutX="64.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/Text-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="92.0" layoutY="223.0" opacity="0.91" prefHeight="397.0" prefWidth="347.0" style="-fx-background-color: #557CF7;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="107.0" AnchorPane.topAnchor="223.0">
+         <children>
+            <TextField fx:id="tf_cmsID" layoutX="38.0" layoutY="124.0" prefHeight="41.0" prefWidth="258.0" promptText="Enter your CMS ID" />
+            <PasswordField fx:id="tf_password" layoutX="38.0" layoutY="199.0" prefHeight="41.0" prefWidth="258.0" promptText="Enter your Password here" />
+            <Button fx:id="signInButton" alignment="CENTER" contentDisplay="CENTER" layoutX="135.0" layoutY="266.0" mnemonicParsing="false" onAction="#signInButtonOnAction" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 14;" text="SIGN IN" textAlignment="CENTER" textFill="#f2eeee" />
+            <Text fill="WHITE" layoutX="111.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN PAGE" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="loginWarningLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="83.0" prefHeight="18.0" prefWidth="347.0" textAlignment="CENTER" textFill="#c6c6c6">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="forgotPasswordButton" alignment="CENTER" layoutX="109.0" layoutY="317.0" mnemonicParsing="false" onAction="#forgotPasswordClicked" style="-fx-background-color: transparent;" text="Forgot Password?" textAlignment="CENTER" textFill="WHITE" underline="true" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <ImageView fitHeight="120.0" fitWidth="435.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/corner-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="114.0" fitWidth="388.0" layoutX="158.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@/corner-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="45.0" style="-fx-background-color: #20BDFF; -fx-background-radius: 12;" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 180;">
+               <image>
+                  <Image url="@/backbutton-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
