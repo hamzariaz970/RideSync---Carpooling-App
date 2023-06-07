@@ -9,5 +9,7 @@ Before running:
 3. Google maps API key for Javascript is required for distance calculator and to obtain coordinates. It needs to be added in the classes DistanceCalculator and GoogleMapsCoordinates. API key can be obtained from https://console.cloud.google.com/projectselector2/google/maps-apis/credentials?utm_source=Docs_CreateAPIKey&utm_content=Docs_maps-backend
 
 Name: Hamza Riaz
+
 National University of Sciences & Technology (NUST)
+
 Islamabad, Pakistan
